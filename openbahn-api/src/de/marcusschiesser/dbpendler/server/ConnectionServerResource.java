@@ -12,7 +12,6 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 
 import com.google.appengine.repackaged.com.google.common.base.Function;
 import com.google.appengine.repackaged.com.google.common.collect.Collections2;
@@ -36,7 +35,7 @@ public class ConnectionServerResource implements ConnectionResource {
 
 	@GET
 	@Path("/list")
-	@Produces({ MediaType.APPLICATION_JSON })
+	@Produces("application/json; charset=UTF-8")
 	public ConnectionVO[] listDay(@QueryParam("start") String s, @QueryParam("destination") String d, @QueryParam("date") String date ) {
 		ExceptionUtils.checkRequiredParamters("start",s,"destination",d,"date",date);
 		try {
@@ -54,7 +53,7 @@ public class ConnectionServerResource implements ConnectionResource {
 	
 	@GET
 	@Path("/daily")
-	@Produces({ MediaType.APPLICATION_JSON })
+	@Produces("application/json; charset=UTF-8")
 	public ConnectionVO[] listDaily(@QueryParam("start") String s, @QueryParam("destination") String d ) {
 			ExceptionUtils.checkRequiredParamters("start",s,"destination",d);
 			List<StationVO> starts = StationStorage.getInstance().getStations(s);

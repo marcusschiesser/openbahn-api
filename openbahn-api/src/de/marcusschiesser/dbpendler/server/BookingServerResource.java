@@ -10,7 +10,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response.Status;
 
 import org.xml.sax.SAXException;
@@ -37,7 +36,7 @@ public class BookingServerResource implements BookingResource {
 //	private final Logger log = Logger.getLogger(BookingServerResource.class.getName());
 
 	@GET
-	@Produces({ MediaType.APPLICATION_JSON })
+	@Produces("application/json; charset=UTF-8")
 	public CommitVO book(@QueryParam("login") String login, @QueryParam("pin") String pin, 
 			@QueryParam("start") String s, @QueryParam("destination") String d,
 			@QueryParam("date") String date, @QueryParam("time") String time,

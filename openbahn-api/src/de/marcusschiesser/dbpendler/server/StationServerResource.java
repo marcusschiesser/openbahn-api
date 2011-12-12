@@ -8,7 +8,6 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
-import javax.ws.rs.core.MediaType;
 
 import de.marcusschiesser.dbpendler.common.resources.StationResource;
 import de.marcusschiesser.dbpendler.common.vo.StationVO;
@@ -25,7 +24,7 @@ public class StationServerResource implements
 	
 	@GET
     @Path("/list")
-    @Produces( {MediaType.APPLICATION_JSON } )
+	@Produces("application/json; charset=UTF-8")
 	public StationVO[] getList(@QueryParam("contains") String contains)  {
 		List<StationVO> stations = StationStorage.getInstance().getStations(contains);
 		return stations.toArray(new StationVO[0]);
@@ -33,7 +32,7 @@ public class StationServerResource implements
 	
 	@GET
     @Path("/id/{id}")
-    @Produces( {MediaType.APPLICATION_JSON } )
+	@Produces("application/json; charset=UTF-8")
 	public StationVO get(@PathParam("id") String id) {
 		// TODO Auto-generated method stub
 		return null;
