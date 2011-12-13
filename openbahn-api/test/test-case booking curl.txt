@@ -1,0 +1,1 @@
+curl -i "http://openbahnapi.appspot.com/rest/book?start=Karlruhe%20Hbf&destination=Frankfurt(Main)Hbf&date=26.05.2011&time=08:00&bookType=justreserve&reservationType=fensterGrossraum&login=marcus.schiesser&pin=mypin"
