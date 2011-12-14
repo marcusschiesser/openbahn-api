@@ -22,6 +22,7 @@ public class HTTPSession {
 	
 	private HTTPHeader cookie;
 	private String sessionParam;
+	private static final String RESPONSE_CONTENT_ENCODING = "ISO-8859-1";
 	
 	public HTTPSession() {
 		cookie = null;
@@ -73,7 +74,7 @@ public class HTTPSession {
 		if (resp != null) {
 			responseCode = resp.getResponseCode();
 			if (responseCode == 200) {
-				String response = new String(resp.getContent());
+				String response = new String(resp.getContent(), RESPONSE_CONTENT_ENCODING);
 				log.finer("GET returns: " + response);
 				return response;
 			}
@@ -98,7 +99,7 @@ public class HTTPSession {
 			responseCode = resp.getResponseCode();
 			if (responseCode == 200) {
 				// List<HTTPHeader> headers = resp.getHeaders();
-				String response = new String(resp.getContent());
+				String response = new String(resp.getContent(), RESPONSE_CONTENT_ENCODING);
 				log.finer("POST returns: " + response);
 				return response;
 			}
