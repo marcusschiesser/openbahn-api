@@ -90,7 +90,7 @@ public class HTTPSession {
 			req.setHeader(cookie);
 		if(sessionParam!=null)
 			params = sessionParam + "&" + params;
-		req.setPayload(params.getBytes());
+		req.setPayload(params.getBytes(RESPONSE_CONTENT_ENCODING));
 	
 		HTTPResponse resp = getURLFetchService().fetch(req);
 		updateCookies(resp);
