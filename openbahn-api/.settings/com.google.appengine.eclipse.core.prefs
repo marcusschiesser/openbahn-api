@@ -1,5 +1,8 @@
-#Tue Dec 13 20:33:25 CET 2011
+#Fri Dec 23 20:33:40 CET 2011
 eclipse.preferences.version=1
-filesCopiedToWebInfLib=appengine-api-1.0-sdk-1.6.0.jar|appengine-api-labs-1.6.0.jar|appengine-jsr107cache-1.6.0.jar|jsr107cache-1.1.jar|datanucleus-appengine-1.0.10.final.jar|datanucleus-core-1.1.5.jar|datanucleus-jpa-1.1.5.jar|geronimo-jpa_3.0_spec-1.1.1.jar|geronimo-jta_1.1_spec-1.1.1.jar|jdo2-api-2.3-eb.jar
+filesCopiedToWebInfLib=appengine-api-1.0-sdk-1.6.1.jar|appengine-api-labs-1.6.1.jar|appengine-jsr107cache-1.6.1.jar|jsr107cache-1.1.jar|datanucleus-appengine-1.0.10.final.jar|datanucleus-core-1.1.5.jar|datanucleus-jpa-1.1.5.jar|geronimo-jpa_3.0_spec-1.1.1.jar|geronimo-jta_1.1_spec-1.1.1.jar|jdo2-api-2.3-eb.jar|google_sql.jar
 gaeDeployDialogSettings=
+gaeIsEclipseDefaultInstPath=true
+googleCloudSqlEnabled=false
+localDevMySqlEnabled=true
 validationExclusions=

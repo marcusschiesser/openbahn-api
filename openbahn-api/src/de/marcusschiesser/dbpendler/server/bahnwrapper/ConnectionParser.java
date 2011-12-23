@@ -18,10 +18,10 @@ import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
 
-import com.google.appengine.repackaged.com.google.common.base.Predicate;
-import com.google.appengine.repackaged.com.google.common.collect.Iterables;
-import com.google.appengine.repackaged.com.google.common.collect.Lists;
-import com.google.appengine.repackaged.com.google.common.collect.Sets;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Iterables;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Sets;
 
 import de.marcusschiesser.dbpendler.common.vo.ConnectionVO;
 import de.marcusschiesser.dbpendler.common.vo.StationVO;
@@ -78,7 +78,7 @@ public class ConnectionParser {
 				}
 			});
 			// filter duplicate connections and return the result
-			return Lists.newUnmodifiableArrayList(Sets.newLinkedHashSet(filteredResult));
+			return Lists.newArrayList(Sets.newLinkedHashSet(filteredResult));
 		} catch (IOException e) {
 			log.severe("I/O error: " + e.toString());
 		} catch (SAXException e) {

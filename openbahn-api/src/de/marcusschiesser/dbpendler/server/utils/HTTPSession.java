@@ -13,8 +13,8 @@ import java.util.logging.Logger;
 import com.google.appengine.api.urlfetch.HTTPHeader;
 import com.google.appengine.api.urlfetch.HTTPRequest;
 import com.google.appengine.api.urlfetch.HTTPResponse;
-import com.google.appengine.repackaged.com.google.common.base.Predicate;
-import com.google.appengine.repackaged.com.google.common.collect.Collections2;
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
 
 public class HTTPSession {
 	
