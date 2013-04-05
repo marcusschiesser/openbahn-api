@@ -28,16 +28,20 @@ public class TimeExtractionHandler extends DefaultHandler {
 	
 	@Override
 	public void startElement(String uri, String localName, String qName,
-			Attributes attributes) throws SAXException {
-		if(localName.equalsIgnoreCase("td") && attributes.getValue("class").equalsIgnoreCase("overview timelink")) {
-			insideTimelink = 1;
-		}
-		if(localName.equalsIgnoreCase("td") && attributes.getValue("class").equalsIgnoreCase("overview iphonepfeil")) {
-			insidePrice  = 1;
-		}
-		if(insideTimelink>0 && localName.equalsIgnoreCase("a")) {
-			anchors.add(attributes.getValue("href"));
-		}
+	        Attributes attributes) throws SAXException {
+	
+	        if (localName.equalsIgnoreCase("td")
+	                && "overview timelink".equalsIgnoreCase(attributes.getValue("class"))) {
+	            insideTimelink = 1;
+	        }
+	        if (localName.equalsIgnoreCase("td")
+	                && "overview iphonepfeil".equalsIgnoreCase(attributes.getValue("class"))) {
+	            insidePrice = 1;
+	        }
+	        if (insideTimelink > 0 && "a".equalsIgnoreCase(localName)) {
+	            anchors.add(attributes.getValue("href"));
+	        }
+		
 	}
 	
 	@Override
