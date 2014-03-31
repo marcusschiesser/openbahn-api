@@ -81,7 +81,7 @@ public class TimeExtractionHandler extends DefaultHandler {
 			if(insidePrice==1) {
 				connectionTypes.add(s);
 			} else {
-				String priceAsString = s.replace("&nbsp;EUR", "").replace(',', '.');
+				String priceAsString = s.replace("ab ", "").replace("&nbsp;EUR", "").replace(',', '.');
 				try {
 					double price = Double.parseDouble(priceAsString);
 					log.info("Parsed price: " + price);
